@@ -1,4 +1,3 @@
-
 <image class="poster" src='{{poster}}' mode="aspectFill" />
 
 <view class="preview">
@@ -26,23 +25,23 @@
         <view class="preview-store-info">
             <text class='preview-store-info-address'>{{shop.seat_id}}</text>
             <view class='preview-store-info-detail'>
-            <text>{{shop.address}}
-            {{shop.time}}
-            </text>
+                <text>{{shop.address}}
+                    {{shop.time}}
+                </text>
             </view>
             <view class="preview-store-info-icon">
-                <image src="/images/drink.png" mode=""/>
+                <image src="/images/drink.png" mode="" />
                 <text>早餐</text>
             </view>
         </view>
-        
-        <image class="preview-store-image" src="/images/store.png" mode=""/>
-        
+
+        <image class="preview-store-image" src="/images/store.png" mode="" />
+
     </view>
 </view>
 
 <view class="order" bindtap="toMenu">
-    <image src="/images/icon-tableware.png" mode=""/>
+    <image src="/images/icon-tableware.png" mode="" />
     <view class="order-content">
         <text class="CN">开始点餐\n</text>
         <text class="EN">Order Now</text>
@@ -51,33 +50,45 @@
 
 <view class="mycard">
     <view class="mycard-tag">我的卡包</view>
-    
-    <view class="mycard-card">
-        <image src="/images/card-food.png" mode=""/>
-        <view class="mycard-card-text">
-            <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
-            <view class="mycard-card-price">30元</view>
+
+    <view class="mycard-area">
+        <view class="mycard-card">
+            <image src="/images/card-food.png" mode="" />
+            <view class="mycard-card-text">
+                <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
+                <view class="mycard-card-price">30元</view>
+            </view>
+            <view class="mycard-card-button" style="width: 70px;">立即使用</view>
         </view>
-        <view class="mycard-card-button" style="width: 70px;">立即使用</view>
+
+        <view class="mycard-card">
+            <image src="/images/card-food.png" mode="" />
+            <view class="mycard-card-text">
+                <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
+                <view class="mycard-card-price">30元</view>
+            </view>
+            <view class="mycard-card-button" style="width: 70px;">立即使用</view>
+        </view>
     </view>
 
-    <view class="mycard-card">
-        <image src="/images/card-food.png" mode=""/>
+
+    <!-- <view class="mycard-card">
+        <image src="/images/card-food.png" mode="" />
         <view class="mycard-card-text">
             <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
             <view class="mycard-card-price">30元</view>
         </view>
         <view class="mycard-card-button" style="width: 70px;">立即使用</view>
-    </view>
+    </view> -->
 </view>
 
 <view class="recommand">
     <view class="recommand-tag">店家推荐</view>
     <view class="recommand-card">
-        
+
     </view>
     <view class="recommand-card">
-        
+
     </view>
 </view>
 

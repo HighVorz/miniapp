@@ -1,6 +1,8 @@
 Page({
     data:{
-        poster: '/images/menu-poster.jpg'
+        poster1: '/images/menu-poster1.jpg',
+        poster2: '/images/menu-poster2.jpg',
+        poster3: '/images/menu-poster3.jpg'
     },
 
     return: function(){

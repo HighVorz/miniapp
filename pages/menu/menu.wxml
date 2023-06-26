@@ -1,24 +1,36 @@
-<image class="poster" src='{{poster}}' mode="aspectFill" />
+<swiper class="poster">
+    <swiper-item>
+        <image class="poster" src="{{poster1}}" mode="aspectFill" />
+    </swiper-item>
+    <swiper-item>
+        <image class="poster" src="{{poster2}}" mode="aspectFill" />
+    </swiper-item>
+    <swiper-item>
+        <image class="poster" src="{{poster3}}"  mode="aspectFill" />
+    </swiper-item>
+</swiper>
 
 <view class="top-ui">
-    
-    <image class="return" bindtap="return" src="/images/return.png" mode=""/>
-    
+    <view class="top-block">
+        <view bindtap="return" class="circle">
+            <image class="return" src="/images/icon-return.png" mode="" />
+        </view>
 
-    <view class="guide">
-
+        <view bindtap="guide" class="circle">
+            <image class="guide" src="/images/icon-guide.png" mode="" />
+        </view>
     </view>
 </view>
 
 
 <view class="menu">
     <view class="menu-toplayer">
-        <image src="/images/icon-megaphone.png" mode=""/>
+        <image src="/images/icon-megaphone.png" mode="" />
         <text>"珍惜粮食 按需点餐"</text>
     </view>
     <view class="menu-shop">
         <view class="menu-shop-left">
-            <image class="menu-shop-icon" src="/images/icon-shop.png"/>
+            <image class="menu-shop-icon" src="/images/icon-shop.png" />
             <view class="menu-shop-left-name">聚丰-51187212</view>
             <view class="menu-shop-left-method">到店</view>
             <view class="menu-shop-left-distance">聚丰园路165号 | 837m</view>
@@ -27,29 +39,25 @@
         </view>
     </view>
     <view class="menu-table">
-        <view class="menu-table-item">经典菜单</view>
+        <view class="menu-table-item" checked="checked">经典菜单</view>
         <view class="menu-table-item">自在厨房</view>
         <view class="menu-table-button">一起点</view>
     </view>
 
     <view class="menu-section">
-        <view>
+        <view class="menu-section-buttonList">
             <view class="menu-section-button">人气\n热卖</view>
             <view class="menu-section-button">灵魂\n宵夜</view>
             <view class="menu-section-button">OK餐单人餐</view>
             <view class="menu-section-button">多人餐</view>
             <view class="menu-section-button">全鸡</view>
             <view class="menu-section-button">炸鸡\n小食</view>
-            <view class="menu-section-button">炸鸡\n小食</view>
-            <view class="menu-section-button">炸鸡\n小食</view>
-            <view class="menu-section-button">炸鸡\n小食</view>
-            <view class="menu-section-button">炸鸡\n小食</view>
-            <view class="menu-section-button">炸鸡\n小食</view>
-            <view class="menu-section-button">炸鸡\n小食</view>
         </view>
-        
-        <view class="menu-section-list">
-            <view class="menu-section-item">
+
+        <view class="menu-section-foodList">
+            <view class="menu-section-foodKind">人气热卖</view>
+            <view class="menu-section-food">
+                
             </view>
         </view>
     </view>

@@ -11,9 +11,7 @@ page {
 
 .preview {
     width: 90%;
-    /* height: 175px; */
     margin: -40px auto 0 auto;
-    /* border-radius: 12px; */
 }
 
 .preview-user {
@@ -110,7 +108,6 @@ page {
     margin: 9px 0 0 12px;
     font-size: 10px;
     font-weight: bold;
-    /* display: inline-block; */
 }
 
 .preview-store-image {
@@ -128,13 +125,6 @@ page {
     display: flex;
     flex-direction: row;
 }
-
-/* .order-image-box{
-    width: 152px;
-    height: 56px;
-    display: inline-block; 
-    vertical-align: bottom;
-}  */
 
 .order image {
     width: 25px;
@@ -172,11 +162,18 @@ page {
     font-weight: bold;
 }
 
+.mycard-area{
+    width: fit-content;
+    height: 98px;
+    display: flex;
+}
+
 .mycard-card {
     margin-top: 4px;
     width: 332px;
     height: 98px;
     background-color: white;
+    margin-right: 10px;
     border-radius: 12px;
     display: flex;
     font-display: row;
