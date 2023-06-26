@@ -177,6 +177,8 @@ page{
     height: 98px;
     background-color: white;
     border-radius: 12px;
+    display: flex;
+    font-display: row;
 }
 
 .mycard image{

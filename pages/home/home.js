@@ -49,6 +49,11 @@ Page({
         })
     },
 
+    toMenu: function(){
+        wx.navigateTo({
+          url: '../menu/menu',
+        })
+    },
     // 只触发一次
     onLoad(options) {
         

@@ -1,5 +1,16 @@
 <image class="poster" src='{{poster}}' mode="aspectFill" />
 
+<view class="top-ui">
+    
+    <image class="return" bindtap="return" src="/images/return.png" mode=""/>
+    
+
+    <view class="guide">
+
+    </view>
+</view>
+
+
 <view class="menu">
     <view class="menu-toplayer">
         <image src="/images/icon-megaphone.png" mode=""/>

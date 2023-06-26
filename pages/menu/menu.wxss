@@ -5,6 +5,19 @@
     display: block; 
 }
 
+.top-ui{
+    display: flex;
+    font-display: row;
+}
+
+.return{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    color: #cccccc;
+    opacity: 0.5;
+}
+
 .menu{
     margin: -33px auto 0 auto;
     background-color: rgb(249, 249, 249);
@@ -103,11 +116,11 @@
 }
 
 .menu-button-list{
-
+    color: white;
 }
 
 .menu-section-item{
-    
+    color: white;
 }
 
 

@@ -41,7 +41,7 @@
     </view>
 </view>
 
-<view class="order">
+<view class="order" bindtap="toMenu">
     <image src="/images/icon-tableware.png" mode=""/>
     <view class="order_content">
         <text class="CN">开始点餐\n</text>
@@ -54,8 +54,8 @@
     <view class="mycard_card">
         <image src="/images/card-food.png" mode=""/>
         <view>
-            <view class="goods">{{}}</view>
-            <view class="price">{{}}</view>
+            <view class="goods">粽子</view>
+            <view class="price">30元</view>
         </view>
     </view>
 </view>
