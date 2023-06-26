@@ -1,0 +1,129 @@
+.poster{
+    width: 100%;
+    height: 273px;
+    margin: 0;
+    display: block; 
+}
+
+.menu{
+    margin: -33px auto 0 auto;
+    background-color: rgb(249, 249, 249);
+}
+
+.menu-toplayer{
+    height: 33px;
+    border-top-left-radius: 24px;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-toplayer image{
+    width: 24px;
+    height: 24px;
+    margin: 4px 0 0 24px;
+}
+
+.menu-toplayer text{
+    margin: 6px 0 0 8px;
+    font-size: 15px;
+}
+
+.menu-shop{
+    height: 64px;
+}
+
+.menu-shop-left{
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    width: 220px;
+}
+
+.menu-shop-icon{
+    width: 30px;
+    height: 30px;
+    margin: 10px 0 0 12px;
+}
+
+.menu-shop-left-name{
+    margin: 10px 0 0 4px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu-shop-left-method{
+    margin: 2px 0 0 12px;
+    font-size: 14px;
+}
+
+.menu-shop-left-distance{
+    font-size: 14px;
+    margin: 2px 0 0 4px;
+    color: rgb(153, 153, 153);
+}
+
+
+.menu-table{
+    display: flex;
+    flex-direction: row;
+    height: 44px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-color: rgb(241, 229, 229);
+}
+
+.menu-table-item{
+    margin: 15px 0 0 14px;
+    font-size: 15px;
+}
+
+.menu-table-button{
+    margin: 8px 8px auto auto;
+    width: 72px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    font-family: '黑体';
+    font-size: 14px;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.menu-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.menu-section-button{
+    width: 50px;
+    height: 46px;
+    border-bottom-style: solid;
+    border-color: rgb(241, 229, 229);
+}
+
+.menu-button-list{
+
+}
+
+.menu-section-item{
+    
+}
+
+
+
+.orderbar{
+    position: fixed;
+    z-index: 100;
+    width: 60%;
+    height: 48px;
+    border-radius: 24px;
+    background-color: grey;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    text-align: center;
+    line-height: 48px;
+    color: white;
+}

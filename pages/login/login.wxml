@@ -1,0 +1,7 @@
+
+<view class="container">
+  <image class="bgPic" src="{{avartar}}"></image>                                 
+</view>
+<button class="weui-btn" bind:tap="getUserProfile">使用头像</button>
+
+<button bindtap="getInfo" type="primary">请求</button>

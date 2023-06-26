@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/menu/menu",
+    "pages/home/home",
+    "pages/login/login",
+    "pages/user/user",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "sitemapLocation": "sitemap.json"
+}

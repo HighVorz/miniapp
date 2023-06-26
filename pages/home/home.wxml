@@ -1,0 +1,61 @@
+
+<image class="poster" src='{{poster}}' mode="aspectFill" />
+
+<view class="preview">
+    <view class="preview_user">
+        <image class="preview_user_avatar" src='{{user.avatar}}' />
+        <view class="preview_user_name">{{user.name}}</view>
+        <image class="preview_user_rightarrow" src="/images/icon-arrow-right.png" />
+        <view class="preview_user_list">
+            <view class="preview_user_list-item">
+                <image src="/images/icon-package.png" />
+                <text>卡包</text>
+            </view>
+            <view class="preview_user_list-item">
+                <image src="/images/icon-order.png" />
+                <text>订单</text>
+            </view>
+            <view class="preview_user_list-item">
+                <image src="/images/icon-QRcode.png" />
+                <text class=".name">二维码</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="preview_store">
+        <view class="preview_store_info">
+            <text class='preview_store_info_address'>{{shop.address}}</text>
+            <view class='preview_store_info_detail'>
+            <text>{{shop.address_detail}}
+            {{shop.time}}
+            </text>
+            </view>
+            <view class="preview_store_info_icon">
+                <image src="/images/drink.png" mode=""/>
+                <text>早餐</text>
+            </view>
+        </view>
+        
+        <image class="preview_store_image" src="/images/store.png" mode=""/>
+        
+    </view>
+</view>
+
+<view class="order">
+    <image src="/images/icon-tableware.png" mode=""/>
+    <view class="order_content">
+        <text class="CN">开始点餐\n</text>
+        <text class="EN">Order Now</text>
+    </view>
+</view>
+
+<view class="mycard">
+    <view class="mycard_tag">我的卡包</view>
+    <view class="mycard_card">
+        <image src="/images/card-food.png" mode=""/>
+        <view>
+            <view class="goods">{{}}</view>
+            <view class="price">{{}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,47 @@
+<image class="poster" src='{{poster}}' mode="aspectFill" />
+
+<view class="menu">
+    <view class="menu-toplayer">
+        <image src="/images/icon-megaphone.png" mode=""/>
+        <text>"珍惜粮食 按需点餐"</text>
+    </view>
+    <view class="menu-shop">
+        <view class="menu-shop-left">
+            <image class="menu-shop-icon" src="/images/icon-shop.png"/>
+            <view class="menu-shop-left-name">聚丰-51187212</view>
+            <view class="menu-shop-left-method">到店</view>
+            <view class="menu-shop-left-distance">聚丰园路165号 | 837m</view>
+        </view>
+        <view class="menu-reservation">
+        </view>
+    </view>
+    <view class="menu-table">
+        <view class="menu-table-item">经典菜单</view>
+        <view class="menu-table-item">自在厨房</view>
+        <view class="menu-table-button">一起点</view>
+    </view>
+
+    <view class="menu-section">
+        <view>
+            <view class="menu-section-button">人气\n热卖</view>
+            <view class="menu-section-button">灵魂\n宵夜</view>
+            <view class="menu-section-button">OK餐单人餐</view>
+            <view class="menu-section-button">多人餐</view>
+            <view class="menu-section-button">全鸡</view>
+            <view class="menu-section-button">炸鸡\n小食</view>
+            <view class="menu-section-button">炸鸡\n小食</view>
+            <view class="menu-section-button">炸鸡\n小食</view>
+            <view class="menu-section-button">炸鸡\n小食</view>
+            <view class="menu-section-button">炸鸡\n小食</view>
+            <view class="menu-section-button">炸鸡\n小食</view>
+            <view class="menu-section-button">炸鸡\n小食</view>
+        </view>
+        
+        <view class="menu-section-list">
+            <view class="menu-section-item">
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="orderbar">未选购餐品</view>
