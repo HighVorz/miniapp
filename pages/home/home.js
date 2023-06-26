@@ -8,8 +8,8 @@ Page({
             avatar: 'http://47.115.231.44/images/user.jpg'
         },
         shop: {
-            address: '聚丰-51187272',
-            address_detail: '聚丰园路165号',
+            seat_id: 'A23号',
+            address: '聚丰园路165号',
             time: '营业时间: 06:00-23:00',
         }
 
@@ -47,6 +47,29 @@ Page({
                 console.log("获取用户信息失败", res)
             }
         })
+    },
+    toUser: function(){
+        wx.navigateTo({
+          url: '../user/user',
+        })
+    },
+
+    toPackage: function(){
+        wx.navigateTo({
+            url: '../package/package',
+          })
+    },
+
+    toOrder: function(){
+        wx.navigateTo({
+            url: '../order/order',
+          })
+    },
+
+    toVipcode: function(){
+        wx.navigateTo({
+            url: '../vipcode/vipcode',
+          })
     },
 
     toMenu: function(){

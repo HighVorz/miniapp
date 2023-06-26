@@ -2,60 +2,87 @@
 <image class="poster" src='{{poster}}' mode="aspectFill" />
 
 <view class="preview">
-    <view class="preview_user">
-        <image class="preview_user_avatar" src='{{user.avatar}}' />
-        <view class="preview_user_name">{{user.name}}</view>
-        <image class="preview_user_rightarrow" src="/images/icon-arrow-right.png" />
-        <view class="preview_user_list">
-            <view class="preview_user_list-item">
+    <view class="preview-user">
+        <image bindtap='toUser' class="preview-user-avatar" src='{{user.avatar}}' />
+        <view bindtap='toUser' class="preview-user-name">{{user.name}}</view>
+        <image bindtap='toUser' class="preview-user-rightarrow" src="/images/icon-arrow-right.png" />
+        <view class="preview-user-list">
+            <view bindtap='toPackage' class="preview-user-list-item">
                 <image src="/images/icon-package.png" />
                 <text>卡包</text>
             </view>
-            <view class="preview_user_list-item">
+            <view bindtap='toOrder' class="preview-user-list-item">
                 <image src="/images/icon-order.png" />
                 <text>订单</text>
             </view>
-            <view class="preview_user_list-item">
+            <view bindtap='toVipcode' class="preview-user-list-item">
                 <image src="/images/icon-QRcode.png" />
-                <text class=".name">二维码</text>
+                <text class=".name">会员码</text>
             </view>
         </view>
     </view>
 
-    <view class="preview_store">
-        <view class="preview_store_info">
-            <text class='preview_store_info_address'>{{shop.address}}</text>
-            <view class='preview_store_info_detail'>
-            <text>{{shop.address_detail}}
+    <view class="preview-store">
+        <view class="preview-store-info">
+            <text class='preview-store-info-address'>{{shop.seat_id}}</text>
+            <view class='preview-store-info-detail'>
+            <text>{{shop.address}}
             {{shop.time}}
             </text>
             </view>
-            <view class="preview_store_info_icon">
+            <view class="preview-store-info-icon">
                 <image src="/images/drink.png" mode=""/>
                 <text>早餐</text>
             </view>
         </view>
         
-        <image class="preview_store_image" src="/images/store.png" mode=""/>
+        <image class="preview-store-image" src="/images/store.png" mode=""/>
         
     </view>
 </view>
 
 <view class="order" bindtap="toMenu">
     <image src="/images/icon-tableware.png" mode=""/>
-    <view class="order_content">
+    <view class="order-content">
         <text class="CN">开始点餐\n</text>
         <text class="EN">Order Now</text>
     </view>
 </view>
 
 <view class="mycard">
-    <view class="mycard_tag">我的卡包</view>
-    <view class="mycard_card">
+    <view class="mycard-tag">我的卡包</view>
+    
+    <view class="mycard-card">
         <image src="/images/card-food.png" mode=""/>
-        <view>
-            <view class="goods">粽子</view>
-            <view class="price">30元</view>
+        <view class="mycard-card-text">
+            <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
+            <view class="mycard-card-price">30元</view>
         </view>
+        <view class="mycard-card-button" style="width: 70px;">立即使用</view>
+    </view>
+
+    <view class="mycard-card">
+        <image src="/images/card-food.png" mode=""/>
+        <view class="mycard-card-text">
+            <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
+            <view class="mycard-card-price">30元</view>
+        </view>
+        <view class="mycard-card-button" style="width: 70px;">立即使用</view>
     </view>
 </view>
+
+<view class="recommand">
+    <view class="recommand-tag">店家推荐</view>
+    <view class="recommand-card">
+        
+    </view>
+    <view class="recommand-card">
+        
+    </view>
+</view>
+
+<div class="endline">
+    <span class="line"></span>
+    <span class="text">已经是底部了</span>
+    <span class="line"></span>
+</div>

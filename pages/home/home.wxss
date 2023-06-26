@@ -1,22 +1,22 @@
-page{
+page {
     background-color: rgb(245, 245, 245);
 }
 
-.poster{
+.poster {
     width: 100%;
     height: 264px;
     margin: 0;
-    display: block; 
+    display: block;
 }
 
-.preview{
+.preview {
     width: 90%;
     /* height: 175px; */
     margin: -40px auto 0 auto;
     /* border-radius: 12px; */
 }
 
-.preview_user{
+.preview-user {
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -24,14 +24,14 @@ page{
     border-radius: 12px;
 }
 
-.preview_user_avatar{
+.preview-user-avatar {
     width: 28px;
     height: 28px;
     border-radius: 14px;
     margin: 7px 0 0 16px;
 }
 
-.preview_user_name{
+.preview-user-name {
     font-family: -apple-system, sans-serif;
     font-size: 14px;
     width: 96px;
@@ -39,37 +39,37 @@ page{
     margin: 10px 0 0 12px;
 }
 
-.preview_user_rightarrow{
+.preview-user-rightarrow {
     width: 12px;
     height: 12px;
     margin: 13px 0 0 4px;
 }
 
-.preview_user_list{
+.preview-user-list {
     margin-left: auto;
     display: flex;
     flex-direction: row;
 }
 
-.preview_user_list-item{
+.preview-user-list-item {
     margin: 0 20px 0 0;
     display: flex;
     flex-direction: column;
 }
 
-.preview_user_list-item image{
+.preview-user-list-item image {
     width: 20px;
     height: 20px;
     margin: 4px auto 0 auto;
 }
 
-.preview_user_list-item text{
+.preview-user-list-item text {
     margin: 1px auto;
     font-size: 10px;
     font-weight: bold;
 }
 
-.preview_store{
+.preview-store {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -79,26 +79,26 @@ page{
     border-radius: 0 0 12px 12px;
 }
 
-.preview_store_info{
+.preview-store-info {
     margin: 16px 0 0 12px;
 }
 
-.preview_store_info_address{
+.preview-store-info-address {
     font-size: 18px;
     font-weight: bold;
 }
 
-.preview_store_info_detail{
+.preview-store-info-detail {
     margin-top: 14px;
     font-size: 10px;
-    color: rgb(153,153,153);
+    color: rgb(153, 153, 153);
 }
 
-.preview_store_info_icon{
+.preview-store-info-icon {
     display: flex;
 }
 
-.preview_store_info_icon image{
+.preview-store-info-icon image {
     margin-top: 10px;
     margin-left: 12px;
     width: 12px;
@@ -106,20 +106,20 @@ page{
     display: inline-block;
 }
 
-.preview_store_info_icon text{
+.preview-store-info-icon text {
     margin: 9px 0 0 12px;
     font-size: 10px;
     font-weight: bold;
     /* display: inline-block; */
-} 
+}
 
-.preview_store_image{
+.preview-store-image {
     width: 90px;
     height: 90px;
     margin: 23px 0 auto auto;
 }
 
-.order{
+.order {
     width: 90%;
     height: 56px;
     margin: 22px auto 0 auto;
@@ -129,49 +129,50 @@ page{
     flex-direction: row;
 }
 
-/* .order_image_box{
+/* .order-image-box{
     width: 152px;
     height: 56px;
     display: inline-block; 
     vertical-align: bottom;
 }  */
 
-.order image{
+.order image {
     width: 25px;
     height: 25px;
     margin: 15px 0 0 127px;
 }
 
-.order_content{
+.order-content {
     width: auto;
     height: 56px;
 }
 
-.order_content .CN{
+.order-content .CN {
     display: block;
     margin-top: 8px;
     font-size: 18px;
     color: white;
 }
 
-.order_content .EN{
+.order-content .EN {
     display: block;
     font-size: 13px;
     color: white;
 }
 
-.mycard{
+.mycard {
     margin: 35px 0 0 22px;
     width: 95%;
     height: 122px;
+    overflow-x: scroll;
 }
 
-.mycard_tag{
+.mycard-tag {
     font-size: 16px;
     font-weight: bold;
 }
 
-.mycard_card{
+.mycard-card {
     margin-top: 4px;
     width: 332px;
     height: 98px;
@@ -181,9 +182,81 @@ page{
     font-display: row;
 }
 
-.mycard image{
+.mycard image {
     display: inline-block;
     width: 80px;
     height: 80px;
     margin: 12px 0 0 10px;
+}
+
+.mycard-card-text {
+    margin: 17px 0 0 5px;
+}
+
+.mycard-card-goods {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.mycard-card-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #d42d34;
+}
+
+.mycard-card-button {
+    background-color: #d42d34;
+    width: 70px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    margin: 37px 17px auto auto;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+
+.recommand {
+    margin: 35px 0 0 22px;
+    width: 95%;
+}
+
+.recommand-tag {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.recommand-card {
+    margin: 4px 0 12px 0;
+    width: 332px;
+    height: 98px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    font-display: row;
+}
+
+.endline {
+    width: 80%;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    display: flex;
+    font-display: row;
+}
+
+.endline .line {
+    width: 130px;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+}
+
+.endline .text {
+    font-size: 12px;
+    margin: 0 20px 0 20px;
+    width: 100px;
+    color: #686868;
+    vertical-align: center;
 }

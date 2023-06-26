@@ -2,8 +2,10 @@
   "pages":[
     "pages/home/home",
     "pages/menu/menu",
-    
+    "pages/package/package",
+    "pages/order/order",
     "pages/login/login",
+    "pages/vipcode/vipcode",
     "pages/user/user",
     "pages/logs/logs"
   ],
