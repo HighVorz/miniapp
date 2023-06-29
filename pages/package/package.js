@@ -1,5 +1,11 @@
 Page({
+    data:{
+        title: '我的卡包'
+    },
+    
     return: function(){
-        wx.navigateBack();
+        wx.navigateTo({
+          url: '../home/home',
+        })();
     }
 })

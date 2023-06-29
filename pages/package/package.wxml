@@ -1,4 +1,52 @@
+<view class="top-ui">
+    <view class="title">{{title}}</view>
+</view>
+
+<image bindtap='return' class="return" src="/images/icon-return.png" mode="" />
 
 
-<image class="return" bindtap="return" src="/images/return.png" mode=""/>
-<view class="prompt">package page</view>
+<view class="card">
+    <view class="card-top">
+        <image src="/images/card-food.png" mode=""/>
+        <view class="card-content">
+            <view class="name">香糯鲜肉粽子礼盒</view>
+            <view class="tag">端午新品尝鲜</view>
+            <view class="price">30元</view>
+            <view class="row-direction">
+                <view class="validity">2023.05.26-2023.06.25</view>
+                <view class="button">立即使用</view>
+            </view>
+            
+        </view>
+    </view>
+
+    <view class="card-bottom">
+        <view class="left-edge"></view>
+        <view class="right-edge"></view>
+        <image src="/images/icon-help.png" mode=""/>
+        <view class="description">兑换说明</view>
+        <view class="checkcode">
+            <view class="show-checkcode">展示核销码</view>
+            <image src="/images/icon-arrow-down.png" mode=""/>
+        </view>
+    </view>
+</view>
+
+
+<view class="card">
+    <view class="card-top">
+        <image src="/images/card-food.png" mode=""/>
+        <view class="card-content">
+            <view class="food-name"></view>
+            <view class="tag"></view>
+            <view class="price"></view>
+            <view class="validity"></view>
+            <view class="button"></view>
+        </view>
+    </view>
+
+    <view class="card-bottom">
+        <view class="left-edge"></view>
+        <view class="right-edge"></view>
+    </view>
+</view>

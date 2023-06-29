@@ -1,8 +1,7 @@
 {
   "pages":[
-    
-    "pages/menu/menu",
     "pages/home/home",
+    "pages/menu/menu",
     "pages/package/package",
     "pages/detail/detail",
     "pages/order/order",

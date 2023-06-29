@@ -50,9 +50,10 @@
 
 <view class="mycard">
     <view class="mycard-tag">我的卡包</view>
-
     <view class="mycard-area">
         <view class="mycard-card">
+            <view class="left-edge"></view>
+            <view class="right-edge"></view>
             <image src="/images/card-food.png" mode="" />
             <view class="mycard-card-text">
                 <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
@@ -62,6 +63,8 @@
         </view>
 
         <view class="mycard-card">
+            <view class="left-edge"></view>
+            <view class="right-edge"></view>
             <image src="/images/card-food.png" mode="" />
             <view class="mycard-card-text">
                 <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
@@ -69,17 +72,18 @@
             </view>
             <view class="mycard-card-button" style="width: 70px;">立即使用</view>
         </view>
+        <!-- <view class="mycard-card">
+            <image src="/images/card-food.png" mode="" />
+            <view class="mycard-card-text">
+                <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
+                <view class="mycard-card-price">30元</view>
+            </view>
+            <view class="mycard-card-button" style="width: 70px;">立即使用</view>
+        </view> -->
     </view>
 
 
-    <!-- <view class="mycard-card">
-        <image src="/images/card-food.png" mode="" />
-        <view class="mycard-card-text">
-            <view class="mycard-card-goods">香糯鲜肉粽礼盒</view>
-            <view class="mycard-card-price">30元</view>
-        </view>
-        <view class="mycard-card-button" style="width: 70px;">立即使用</view>
-    </view> -->
+
 </view>
 
 <view class="recommand">

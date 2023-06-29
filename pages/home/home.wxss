@@ -152,9 +152,8 @@ page {
 
 .mycard {
     margin: 35px 0 0 22px;
-    width: 95%;
+    /* width: 95%; */
     height: 122px;
-    overflow-x: scroll;
 }
 
 .mycard-tag {
@@ -163,13 +162,17 @@ page {
 }
 
 .mycard-area{
-    width: fit-content;
     height: 98px;
+    /* width: fit-content; */
     display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
 
 .mycard-card {
     margin-top: 4px;
+    flex-shrink: 0;
     width: 332px;
     height: 98px;
     background-color: white;
@@ -177,6 +180,27 @@ page {
     border-radius: 12px;
     display: flex;
     font-display: row;
+    position: relative;
+}
+
+.left-edge{
+    position: absolute;
+    top: 41px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
+}
+
+.right-edge{
+    position: absolute;
+    top: 41px;
+    left: 324px;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
 }
 
 .mycard image {

@@ -1,3 +1,4 @@
+
 <swiper class="poster">
     <swiper-item>
         <image class="poster" src="{{poster1}}" mode="aspectFill" />
@@ -6,12 +7,11 @@
         <image class="poster" src="{{poster2}}" mode="aspectFill" />
     </swiper-item>
     <swiper-item>
-        <image class="poster" src="{{poster3}}"  mode="aspectFill" />
+        <image class="poster" src="{{poster3}}" mode="aspectFill" />
     </swiper-item>
 </swiper>
 
 <view class="top-ui">
-    <view class="top-block">
         <view bindtap="return" class="circle">
             <image class="return" src="/images/icon-return.png" mode="" />
         </view>
@@ -19,7 +19,6 @@
         <view bindtap="guide" class="circle">
             <image class="guide" src="/images/icon-guide.png" mode="" />
         </view>
-    </view>
 </view>
 
 
@@ -31,7 +30,7 @@
     <view class="menu-shop">
         <view class="menu-shop-left">
             <image class="menu-shop-icon" src="/images/icon-shop.png" />
-            <view class="menu-shop-left-name">聚丰-51187212</view>
+            <view class="menu-shop-left-name">A23号</view>
             <view class="menu-shop-left-method">到店</view>
             <view class="menu-shop-left-distance">聚丰园路165号 | 837m</view>
         </view>
@@ -45,22 +44,83 @@
     </view>
 
     <view class="menu-section">
-        <view class="menu-section-buttonList">
-            <view class="menu-section-button">人气\n热卖</view>
-            <view class="menu-section-button">灵魂\n宵夜</view>
-            <view class="menu-section-button">OK餐单人餐</view>
-            <view class="menu-section-button">多人餐</view>
-            <view class="menu-section-button">全鸡</view>
-            <view class="menu-section-button">炸鸡\n小食</view>
+        <view class="menu-section-buttonList" >
+            <view class="menu-section-button" wx:for="{{anchorlist}}">{{item}}</view>
         </view>
 
         <view class="menu-section-foodList">
             <view class="menu-section-foodKind">人气热卖</view>
             <view class="menu-section-food">
-                
+                <image src="/images/food1.jpg" mode="aspectFill" />
+                <view class="food-info">
+                    <view class="food-name">人气明星随心配</view>
+                    <view class="food-price">￥34.0起</view>
+                    <view bindtap='addFood' class="food-button">选规格</view>
+                </view>
+            </view>
+
+            <view class="menu-section-foodKind">人气热卖</view>
+            <view class="menu-section-food">
+                <image src="/images/food1.jpg" mode="aspectFill" />
+                <view class="food-info">
+                    <view class="food-name">人气明星随心配</view>
+                    <view class="food-price">￥34.0起</view>
+                    <view bindtap='addFood' class="food-button">选规格</view>
+                </view>
+            </view>
+
+            <view class="menu-section-foodKind">人气热卖</view>
+            <view class="menu-section-food">
+                <image src="/images/food1.jpg" mode="aspectFill" />
+                <view class="food-info">
+                    <view class="food-name">人气明星随心配</view>
+                    <view class="food-price">￥34.0起</view>
+                    <view bindtap='addFood' class="food-button">选规格</view>
+                </view>
+            </view>
+
+
+            <view class="menu-section-foodKind">人气热卖</view>
+            <view class="menu-section-food">
+                <image src="/images/food1.jpg" mode="aspectFill" />
+                <view class="food-info">
+                    <view class="food-name">人气明星随心配</view>
+                    <view class="food-price">￥34.0起</view>
+                    <view bindtap='addFood' class="food-button">选规格</view>
+                </view>
+            </view>
+
+
+            <view class="menu-section-foodKind">人气热卖</view>
+            <view class="menu-section-food">
+                <image src="/images/food1.jpg" mode="aspectFill" />
+                <view class="food-info">
+                    <view class="food-name">人气明星随心配</view>
+                    <view class="food-price">￥34.0起</view>
+                    <view bindtap='addFood' class="food-button">选规格</view>
+                </view>
+            </view>
+
+            <view class="menu-section-foodKind">人气热卖</view>
+            <view class="menu-section-food">
+                <image src="/images/food1.jpg" mode="aspectFill" />
+                <view class="food-info">
+                    <view class="food-name">人气明星随心配</view>
+                    <view class="food-price">￥34.0起</view>
+                    <view bindtap='addFood' class="food-button">选规格</view>
+                </view>
             </view>
         </view>
     </view>
 </view>
 
-<view class="orderbar">未选购餐品</view>
+<view class="orderbar-before">未选购餐品</view>
+
+<!-- <view class="orderbar-after">
+    <view class="selected">
+        <image src="/images/icon-hamburg.png" mode=""/>
+        <view class="mark">1</view>
+    </view>
+    <view class="price-to-pay">￥34.0</view>
+    <view class="done">选好了</view>
+</view> -->
