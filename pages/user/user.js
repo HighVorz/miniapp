@@ -1,5 +1,13 @@
+// pages/userLogin/user.js
+
 Page({
-    return: function(){
-        wx.navigateBack();
-    }
+
+    /**
+     * 页面的初始数据
+     */
+    data: {
+        // realUrl: '',
+        openid: ''
+    },
+
 })
