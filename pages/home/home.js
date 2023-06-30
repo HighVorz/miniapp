@@ -11,7 +11,29 @@ Page({
             seat_id: 'A23号',
             address: '聚丰园路165号',
             time: '营业时间: 06:00-23:00',
-        }
+        },
+        card: [
+            {
+                food: '香糯鲜肉粽礼盒',
+                img: '/images/card-food.png',
+                price: 30,
+            },
+            {
+                food: '香糯鲜肉粽礼盒',
+                img: '/images/card-food.png',
+                price: 30,
+            },
+            {
+                food: '香糯鲜肉粽礼盒',
+                img: '/images/card-food.png',
+                price: 30,
+            },
+        ],
+
+        recommand: [
+            {},
+            {}
+        ]
 
     },
 

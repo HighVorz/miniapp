@@ -10,13 +10,35 @@ Page({
         poster2: '/images/menu-poster2.jpg',
         poster3: '/images/menu-poster3.jpg',
 
+
+
         anchorlist:[
-            '人气\n热卖',
-            '灵魂\n宵夜',
-            'OK餐\n单人餐',
-            '多人餐',
-            '全鸡',
-            '炸鸡\n小食',
+            {
+                tag: '人气热卖',
+                list:[
+                    {
+                        food: 'hamburg',
+                        price: 32,
+                        img: '/images/food1.jpg',
+                    },
+                    {
+                        food: 'hamburg',
+                        price: 32,
+                        img: '/images/food1.jpg',
+                    }
+                ]
+            },
+            {
+                tag: '灵魂宵夜',
+                list:[
+                    {
+                        food: 'else',
+                        price: 32,
+                        img: '/images/food2.jpg',
+                    }
+                ]
+            },
+
         ],
 
         price: 0,
