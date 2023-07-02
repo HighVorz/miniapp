@@ -1,13 +1,14 @@
 {
   "pages":[
-    "pages/menu/menu",
     "pages/home/home",
+    "pages/menu/menu",
+    "pages/user/user",
     "pages/package/package",
     "pages/detail/detail",
     "pages/order/order",
     "pages/login/login",
     "pages/vipcode/vipcode",
-    "pages/user/user",
+    
     "pages/logs/logs"
   ],
   "window": {

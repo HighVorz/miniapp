@@ -1,6 +1,9 @@
+<!-- poster -->
 <image class="poster" src='{{poster}}' mode="aspectFill" />
 
+<!-- preview -->
 <view class="preview">
+    <!-- user info -->
     <view class="preview-user">
         <image bindtap='toUser' class="preview-user-avatar" src='{{user.avatar}}' />
         <view bindtap='toUser' class="preview-user-name">{{user.name}}</view>
@@ -21,6 +24,7 @@
         </view>
     </view>
 
+    <!-- store info -->
     <view class="preview-store">
         <view class="preview-store-info">
             <text class='preview-store-info-address'>{{shop.seat_id}}</text>
@@ -40,6 +44,7 @@
     </view>
 </view>
 
+<!-- order bar -->
 <view class="order" bindtap="toMenu">
     <image src="/images/icon-tableware.png" mode="" />
     <view class="order-content">
@@ -48,6 +53,7 @@
     </view>
 </view>
 
+<!-- my card -->
 <view class="mycard">
     <view class="mycard-tag">我的卡包</view>
     <view class="mycard-area">
@@ -65,6 +71,7 @@
     </view>
 </view>
 
+<!-- recommand -->
 <view class="recommand">
     <view class="recommand-tag">店家推荐</view>
     <view wx:for='{{recommand}}' class="recommand-card">
@@ -72,6 +79,7 @@
     </view>
 </view>
 
+<!-- endline -->
 <div class="endline">
     <span class="line"></span>
     <span class="text">已经是底部了</span>

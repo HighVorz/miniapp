@@ -5,3 +5,35 @@
 <button class="weui-btn" bind:tap="getUserProfile">使用头像</button>
 
 <button bindtap="getInfo" type="primary">请求</button>
+
+
+<view >
+    <image src="/images/Thursday.jpg" class="img"></image>    
+</view>
+
+<view>
+    <form bindsubmit="doLogin">
+        
+        <view class="inputView">
+            <image class="imgLo" src="/images/userName.png"></image>
+            <label class="labelLo">账号</label>
+            <input class="inputText" type="nickname" name="username" placeholder="请输入账号"/>
+        </view>
+        <view class="line"></view>
+        
+        <view class="inputView">
+            <image class="imgLo" src="/images/password.png"></image>
+            <label class="labelLo">密码</label>
+            <input class="inputText" type="safe-password" name="password" placeholder="请输入密码" password="true"/>
+        </view>
+        
+        <view>
+            <button class="loginBtn" form-type="submit">登录</button>
+        </view>
+       
+        <view>
+            <button class="goToRegist" bindtap="goToRegist">没有账号？注册</button>
+        </view>
+    </form>
+
+</view>

@@ -19,7 +19,8 @@ page {
     display: flex;
     flex-direction: row;
     background-color: #efefef;
-    border-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
 }
 
 .preview-user-avatar {
@@ -152,7 +153,6 @@ page {
 
 .mycard {
     margin: 35px 0 0 22px;
-    /* width: 95%; */
     height: 122px;
 }
 
@@ -163,7 +163,6 @@ page {
 
 .mycard-area{
     height: 98px;
-    /* width: fit-content; */
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -179,7 +178,7 @@ page {
     margin-right: 10px;
     border-radius: 12px;
     display: flex;
-    font-display: row;
+    flex-direction: row;
     position: relative;
 }
 

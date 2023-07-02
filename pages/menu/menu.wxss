@@ -14,8 +14,6 @@
     display: flex;
 }
 
-
-
 .circle{
     width: 32px;
     height: 32px;
@@ -147,7 +145,7 @@
 
 .menu-section-foodList{
     width: 320px;
-    /* height: 100%; */
+    /* height: 300px; */
     display: flex;
     flex-direction: column;
     overflow-x: hidden;

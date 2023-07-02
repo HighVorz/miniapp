@@ -1,4 +1,5 @@
-<swiper class="poster">
+<!-- swiper -->
+<swiper class="poster" autoplay="true" interval="3000" duration="500" circular="true">
     <swiper-item>
         <image class="poster" src="{{poster1}}" mode="aspectFill" />
     </swiper-item>
@@ -10,6 +11,7 @@
     </swiper-item>
 </swiper>
 
+<!-- top ui -->
 <view class="top-ui">
     <view bindtap="return" class="circle">
         <image class="return" src="/images/icon-return.png" mode="" />
@@ -20,7 +22,7 @@
     </view>
 </view>
 
-
+<!-- menu -->
 <view class="menu">
     <view class="menu-toplayer">
         <image src="/images/icon-megaphone.png" mode="" />
@@ -36,6 +38,8 @@
         <view class="menu-reservation">
         </view>
     </view>
+
+    <!-- menu table -->
     <view class="menu-table">
         <view class="menu-table-item" checked="checked">经典菜单</view>
         <view class="menu-table-item">自在厨房</view>
@@ -43,28 +47,33 @@
     </view>
 
     <view class="menu-section">
+        <!-- tag -->
         <view class="menu-section-buttonList">
-            <view class="menu-section-button" wx:for="{{anchorlist}}">{{item.tag}}</view>
+            <view wx:for="{{taglist}}" bindtap='scroll' data-smile='{{index}}' class="menu-section-button" >{{item.tag}}</view>
         </view>
 
-        <view class="menu-section-foodList">
-            <view wx:for="{{anchorlist}}">
-                <view class="menu-section-foodKind">{{item.tag}}</view>
-                <view wx:for="{{item.list}}">
+        <!-- food -->
+        <scroll-view class="menu-section-foodList" scroll-y="true" bindscroll='scroll' scroll-into-view="{{toView}}">
+            <view wx:for="{{taglist}}">
+                <view id='view{{index}}' class="menu-section-foodKind">{{item.tag}}</view>
+                <view wx:for="{{item.foodlist}}">
                     <view class="menu-section-food">
                         <image src="/images/food1.jpg" mode="aspectFill" />
                         <view class="food-info">
                             <view class="food-name">{{item.food}}</view>
                             <view class="food-price">￥{{item.price}}起</view>
-                            <view bindtap='addFood' class="food-button">选规格</view>
+                            <view bindtap='addFood' class="food-button">加入</view>
                         </view>
                     </view>
                 </view>
             </view>
-        </view>
+        </scroll-view>
+
+
     </view>
 </view>
 
+<!-- bar -->
 <view class="orderbar-before">未选购餐品</view>
 
 <!-- <view class="orderbar-after">
