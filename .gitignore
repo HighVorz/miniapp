@@ -1,5 +1,6 @@
 images/
 project.config.json
+project.private.config.json
 # Windows
 [Dd]esktop.ini
 Thumbs.db
