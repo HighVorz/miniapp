@@ -1,5 +1,10 @@
+var app = getApp()
+
 Page({
     data:{
+        username: '暴走的全家桶',
+        phone: '151****6985', 
+        avatar: null,
         list: [
             {
                 img: '/images/icon-order-red.png',
@@ -33,22 +38,49 @@ Page({
                 img: '/images/icon-help-red.png',
                 content: '帮助中心',
                 func: 'to',
-                url: '../help/help'
+                url: '../guide/guide'
             },
             {
                 img: '/images/icon-warning-red.png',
                 content: '如何自助点餐?',
                 func: 'to',
-                url: '../order/order'
+                url: '../guide/guide'
             },
             {
                 img: '/images/icon-warning-red.png',
                 content: '会员工作日午餐时间说明',
                 func: 'to',
-                url: '../order/order'
+                url: '../guide/guide'
             },
         ]
     },
+
+    onLoad: function(){
+       this.onShow();
+    },
+
+    exit: function(){
+        app.globalData.login_status = false;
+        this.onShow();
+    },
+
+    onShow: function(){
+        if (app.globalData.login_status){
+            this.setData({
+                avatar: app.globalData.avatar,
+                username: app.globalData.username,
+                phone: '151****6985'
+            })
+        }
+        else{
+            this.setData({
+                avatar: app.globalData.default_avatar,
+                username: '暴走的全家桶',
+                phone: '****'
+            })
+        }
+    },
+
     to: function(e){
         wx.navigateTo({
           url: e.currentTarget.dataset.smile.url,
@@ -56,8 +88,6 @@ Page({
     },
 
     return: function(){
-        wx.navigateTo({
-          url: '../home/home',
-        })
+       wx.navigateBack()
     }
 })

@@ -1,53 +1,140 @@
-Page({
+const app = getApp()
 
+Page({
     data: {
-        // need to be edit later
-        poster: 'http://47.115.231.44/images/poster.jpg',
-        user: {
-            name: '暴走的全家桶',
-            avatar: 'http://47.115.231.44/images/user.jpg'
-        },
+        login_status: app.globalData.login_status,
+        default_avatar: app.globalData.default_avatar,
+        userinfo: {},
         shop: {
-            seat_id: 'A23号',
+            seat_id: '扫码点餐',
             address: '聚丰园路165号',
             time: '营业时间: 06:00-23:00',
         },
-        card: [
-            {
-                food: '香糯鲜肉粽礼盒',
-                img: '/images/card-food.png',
-                price: 30,
-            },
-            {
-                food: '香糯鲜肉粽礼盒',
-                img: '/images/card-food.png',
-                price: 30,
-            },
-            {
-                food: '香糯鲜肉粽礼盒',
-                img: '/images/card-food.png',
-                price: 30,
-            },
-        ],
+        icon: {
+            icon_package: '/images/icon-package.png',
+            icon_order: '/images/icon-order.png',
+            icon_QRcode: '/images/icon-QRcode.png',
+            mycard_package: '/images/icon-mycard-package.png',
+            icon_drink: '/images/icon-drink.png',
+            icon_tableware: '/images/icon-tableware.png',
+        },
+        discount: [
 
-        recommand: [
-            {},
+        ],
+        resource: {},
+        package: {},
+
+        recommand: [{},
             {}
         ]
 
     },
+    scan: function () {
+        var that = this;
+        wx.scanCode({
+            onlyFromCamera: true,
+            success(res) {
+                var seat_id = JSON.parse(res.result).seat_id;
+                that.setData({
+                    'shop.seat_id': seat_id,
+                })
+                app.globalData.seat_id = seat_id;
+            }
+        })
+    },
 
-    getAvartar(){
+    loadres: function () {
+        var that = this;
+
         wx.request({
-            url: 'http://47.115.231.44/images/user.jpg',
-            method: 'GET',
-            success: (res)=>{
-                wx.saveFile({
-                  tempFilePath: 'res.tempFilePaths',
+            url: app.globalData.home_res,
+            success: function (res) {
+                that.setData({
+                    resource: res.data.data.resource
+                })
+                console.log(res.data.data.resource)
+            },
+            fail: function (res) {
+                console.log("request home_res failed");
+            }
+        })
 
+    },
+
+    getDiscount: function () {
+        var that = this;
+        wx.request({
+            url: app.globalData.home_discount,
+
+            success: function (res) {
+                that.setData({
+                    discount: res.data.data
+                })
+            },
+        })
+    },
+
+    getLogin: function () {
+        var that = this;
+        wx.login({
+            success: function (res) {
+                console.log(res.code)
+                wx.request({
+                    url: app.globalData.login,
+                    method: 'POST',
+                    data: {
+                        code: res.code,
+                        name: 'highvorz',
+                        gender: 0,
+                        avartarUrl: ''
+                    },
+                    header: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.data.code == 200)
+                            console.log("登录成功")
+                        app.globalData.login_status = true
+                        app.globalData.token = res.data.data.token
+                        console.log(app.globalData.token)
+                        that.setData({
+                                login_status: app.globalData.login_status,
+                            }),
+                            // that.onLoad();
+                        that.after_login();
+                            console.log(that.data.login_status)
+                    },
+                    fail: function (res) {
+                        console.log("request fail")
+                        console.log(res)
+                    }
                 })
             }
         })
+    },
+
+    async getUserInfo() {
+        const res = await wx.getUserProfile({
+            desc: '用于完善会员资料',
+        });
+        console.log(res);
+        app.globalData.avatar = res.userInfo.avatarUrl;
+        app.globalData.username = res.userInfo.nickName;
+        this.setData({
+            userinfo: res.userInfo,
+        })
+        app.globalData.userinfo = res.userInfo;
+        this.getLogin();
+    },
+
+    // 登录事件
+    login: function () {
+        this.getUserInfo();
+    },
+
+    after_login(){
+        this.get_package();
     },
 
     getUserProfile() {
@@ -70,48 +157,73 @@ Page({
             }
         })
     },
-    toUser: function(){
+    toUser: function () {
         wx.navigateTo({
-          url: '../user/user',
+            url: '../user/user',
         })
     },
 
-    toPackage: function(){
+    toPackage: function () {
         wx.navigateTo({
             url: '../package/package',
-          })
-    },
-
-    toOrder: function(){
-        wx.navigateTo({
-            url: '../order/order',
-          })
-    },
-
-    toVipcode: function(){
-        wx.navigateTo({
-            url: '../vipcode/vipcode',
-          })
-    },
-
-    toMenu: function(){
-        wx.navigateTo({
-          url: '../menu/menu',
         })
     },
-    // 只触发一次
+
+    toOrder: function () {
+        wx.navigateTo({
+            url: '../order/order',
+        })
+    },
+
+    toVipcode: function () {
+        wx.navigateTo({
+            url: '../vipcode/vipcode',
+        })
+    },
+
+    toMenu: function () {
+        wx.navigateTo({
+            url: '../menu/menu',
+        })
+    },
+
     onLoad(options) {
-        
+        this.loadres();
+        this.getDiscount();
     },
 
+    onShow() {
+        this.setData({
+            login_status: app.globalData.login_status
+        })
+        if (app.globalData.login_status) {
+            this.setData({
+                userinfo: app.globalData.userinfo,
+            })
+        }
+    },
 
-    // 从后台进入前台显示
-    onShow(){
+    onHide() {
 
     },
 
-    // 前台进入后台
-    onHide(){
+    get_package: function () {
+        var that = this;
+        wx.request({
+            url: app.globalData.get_package_url,
+            method: 'POST',
+            header: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Authorization": app.globalData.token,
+            },
+            success: function (res) {
+                that.setData({
+                        package: res.data.data,
+                    }),
+                    that.process_date();
+            }
+        })
+
 
     },
 

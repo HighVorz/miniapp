@@ -1,13 +1,18 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/order/order",
+    "pages/package/package",
+    "pages/vipcode/vipcode",
+    "pages/menu/note",
+    "pages/menu/submit",
+    "pages/guide/guide",
+    "pages/login/login",
+    
     "pages/menu/menu",
     "pages/user/user",
-    "pages/package/package",
+   
     "pages/detail/detail",
-    "pages/order/order",
-    "pages/login/login",
-    "pages/vipcode/vipcode",
     
     "pages/logs/logs"
   ],

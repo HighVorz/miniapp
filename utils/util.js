@@ -14,6 +14,36 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+const login = {
+    function () {
+        wx.login({
+            success: function (res) {
+                console.log(res.code)
+                wx.request({
+                    url: app.globalData.login,
+                    method: 'POST',
+                    data: {
+                        code: res.code,
+                        name: 'highvorz',
+                        gender: 0,
+                        avartarUrl: ''
+                    },
+                    header: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    success: function (res) {
+                        console.log(res)
+                        if (res.data.code == 200)
+                            console.log("登录成功")
+                    },
+                })
+            }
+        })
+    }
+}
+
 module.exports = {
-  formatTime
+  formatTime,
+  login,
+  
 }

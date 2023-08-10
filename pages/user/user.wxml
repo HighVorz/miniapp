@@ -1,22 +1,21 @@
- 
- <view class="top-ui">
-    <image class="return" bindtap="return" src="/images/icon-return-dark.png" mode=""/>
+<view class="top-ui">
+    <image class="return" bindtap="return" src="/images/icon-return-dark.png" mode="" />
     <view class="title">我的</view>
- </view>
+</view>
 
- <view class="user-info">
-    <image class="avartar" src="http://47.115.231.44/images/user.jpg" mode=""/>
+<view class="user-info">
+    <image class="avatar" src="{{avatar}}" mode="" />
     <view class="column">
-        <view class="username">暴走的全家桶</view>
-        <view class="phoneNumber">151****6985</view>
+        <view class="username">{{username}}</view>
+        <view class="phoneNumber">{{phone}}</view>
     </view>
- </view>
+</view>
 
- <view class="list-box">
+<view class="list-box">
     <view wx:for="{{list}}" bindtap='to' data-smile='{{item}}' class="subbox">
-        <image src="{{item.img}}" mode=""/>
+        <image src="{{item.img}}" mode="" />
         <view class="content">{{item.content}}</view>
     </view>
- </view>
+</view>
 
- <view class="exit">退出登录</view>
+<view class="exit" bindtap="exit">退出登录</view>
