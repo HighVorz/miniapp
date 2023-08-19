@@ -25,7 +25,9 @@ Page({
     },
 
     return: function () {
-        wx.navigateBack();
+        wx.navigateTo({
+          url: '../home/home',
+        })();
     },
 
     gotoMenu: function () {

@@ -10,10 +10,10 @@
         <view class="card-content">
             <view class="name">{{item.food_name}}</view>
             <view class="tag">热销</view>
-            <view class="price">30元</view>
+            <view class="price">{{item.sale_price}}元</view>
             <view class="row-direction">
                 <view class="validity">{{item.start_date_str}}-{{item.end_date_str}}</view>
-                <view wx:if="{{item.status}}" class="button" bindtap="usePackage" date-id="{{index}}">立即使用</view>
+                <view wx:if="{{item.status}}" class="button" bindtap="usePackage" data-id="{{item.id}}">立即使用</view>
                 <view wx:else class="expire">已过期</view>
             </view>
             

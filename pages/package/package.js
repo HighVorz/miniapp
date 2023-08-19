@@ -77,10 +77,13 @@ Page({
         })
     },
 
-    usePackage: function(id){
-        var item = this.data.package[id];
+    usePackage: function(e){
+        var item = this.data.package[e.target.dataset.id];
         if(item.status){
-            //
+            let packageStr = JSON.stringify(item)
+            wx.navigateTo({
+              url: '../menu/menu?package=' + packageStr,
+            })
         }
     }
 })

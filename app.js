@@ -1,8 +1,11 @@
 App({
 
     initial: function(){
+
+        // domain
+        this.globalData.current_version = this.globalData.local_version;
+        this.globalData.domain = this.globalData.current_version.domain;
         // api
-        
         this.globalData.api = this.globalData.domain + '/' + this.globalData.api;
         this.globalData.home_discount = this.globalData.api + '/' + this.globalData.home_discount;
         this.globalData.swipers = this.globalData.api + '/' + this.globalData.swipers;
@@ -26,8 +29,23 @@ App({
     },
 
     globalData: {
+
+        // version
+        current_version : {
+            
+        },
+        
+        server_version : {
+            'domain': 'http://highvorz.website',
+        },
+
+        local_version : {
+            'domain': 'http://192.168.5.246/:80',
+        },
+
         // page data
         userinfo: {},
+
         // variable
         default_avatar: '/images/default_avatar.jpg',
         avatar: null,
@@ -45,7 +63,8 @@ App({
         home_discount: 'home/package',
         swipers: "menu/swipers",
         home_res: "home/resource",
-        domain: "http://highvorz.website",
+        
+        domain: '',
         api: "api",
         resource: "static/upload",
         foodlist: "food/index",

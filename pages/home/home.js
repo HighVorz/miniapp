@@ -29,6 +29,7 @@ Page({
         ]
 
     },
+
     scan: function () {
         var that = this;
         wx.scanCode({
@@ -43,6 +44,8 @@ Page({
         })
     },
 
+   
+
     loadres: function () {
         var that = this;
 
@@ -55,6 +58,7 @@ Page({
                 console.log(res.data.data.resource)
             },
             fail: function (res) {
+                console.log(app.globalData.home_res);
                 console.log("request home_res failed");
             }
         })
@@ -79,37 +83,37 @@ Page({
         wx.login({
             success: function (res) {
                 console.log(res.code)
-                wx.request({
-                    url: app.globalData.login,
-                    method: 'POST',
-                    data: {
-                        code: res.code,
-                        name: 'highvorz',
-                        gender: 0,
-                        avartarUrl: ''
-                    },
-                    header: {
-                        "Content-Type": "application/x-www-form-urlencoded"
-                    },
-                    success: function (res) {
-                        console.log(res)
-                        if (res.data.code == 200)
-                            console.log("登录成功")
-                        app.globalData.login_status = true
-                        app.globalData.token = res.data.data.token
-                        console.log(app.globalData.token)
-                        that.setData({
-                                login_status: app.globalData.login_status,
-                            }),
-                            // that.onLoad();
-                        that.after_login();
-                            console.log(that.data.login_status)
-                    },
-                    fail: function (res) {
-                        console.log("request fail")
-                        console.log(res)
-                    }
-                })
+                // wx.request({
+                //     url: app.globalData.login,
+                //     method: 'POST',
+                //     data: {
+                //         code: res.code,
+                //         name: 'highvorz',
+                //         gender: 0,
+                //         avatarUrl: ''
+                //     },
+                //     header: {
+                //         "Content-Type": "application/x-www-form-urlencoded"
+                //     },
+                //     success: function (res) {
+                //         console.log(res)
+                //         if (res.data.code == 200)
+                //             console.log("登录成功")
+                //         app.globalData.login_status = true
+                //         app.globalData.token = res.data.data.token
+                //         console.log(app.globalData.token)
+                //         that.setData({
+                //                 login_status: app.globalData.login_status,
+                //             }),
+                //             // that.onLoad();
+                //         that.after_login();
+                //             console.log(that.data.login_status)
+                //     },
+                //     fail: function (res) {
+                //         console.log("request fail")
+                //         console.log(res)
+                //     }
+                // })
             }
         })
     },
@@ -207,6 +211,7 @@ Page({
 
     },
 
+    // package
     get_package: function () {
         var that = this;
         wx.request({
@@ -218,13 +223,66 @@ Page({
             },
             success: function (res) {
                 that.setData({
-                        package: res.data.data,
-                    }),
-                    that.process_date();
+                    package: res.data.data,
+                }),
+                that.process_date();
             }
         })
 
-
+        
     },
+
+    formatDate: function(date){
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        return year + '.' + month + '.' + day;
+    },
+
+    process_date: function () {
+        var list = this.data.package;
+        for (var key in list) {
+            var item = list[key];
+            var validity = item.validity;
+            // 
+            var start_date = new Date(item.start_date);
+            var start_date_str = this.formatDate(start_date);
+            
+            //
+            var ended_date = start_date.setDate(start_date.getDate() + validity);
+            var end_date = start_date;
+            var end_date_str = this.formatDate(end_date);
+            
+
+            
+            var current_date = Date.now(); 
+            if(current_date > ended_date){
+                list[key]['status'] = false
+            }
+            else{
+                list[key]['status'] = true
+            }
+            
+            
+            list[key]['start_date_str'] = start_date_str;
+            list[key]['end_date_str'] = end_date_str;
+
+            console.log(list[key])
+        }
+
+        this.setData({
+            package: list,
+        })
+    },
+
+    usePackage: function(e){
+        var item = this.data.package[e.target.dataset.id];
+        if(item.status){
+            let packageStr = JSON.stringify(item)
+            wx.navigateTo({
+              url: '../menu/menu?package' + packageStr,
+            })
+        }
+    }
 
 })

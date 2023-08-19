@@ -61,7 +61,7 @@
                                     <view style="font-size: 12px; color: #cc1414; font-weight: bold; margin-top: 6px;">￥</view>{{item.price}}
                                 </view>
                                 <view class="food-button">
-                                    <view bindtap='addFood' data-id="{{item}}" class="button">加入</view>
+                                    <view bindtap='add_button' data-id="{{item.id}}" class="button">加入</view>
                                     <view wx:if="{{order[item.id]}}" class="mark">{{order[item.id].number}}</view>
                                 </view>
                             </view>
@@ -108,9 +108,9 @@
                 <!-- <image src="" mode="" /> -->
                 <view class="detail-item-edit">定制</view>
                 <view class="detail-item-number">
-                    <image bindtap="minus_button" data-id="{{item}}" class="detail-item-number-img" src="/images/icon-minus.png" />
+                    <image bindtap="minus_button" data-id="{{item.id}}" class="detail-item-number-img" src="/images/icon-minus.png" />
                     <view class="detail-item-text">{{order[item.id].number}}</view>
-                    <image bindtap="add_button" data-id="{{item}}" class="detail-item-number-img" src="/images/icon-add.png"/>
+                    <image bindtap="add_button" data-id="{{item.id}}" class="detail-item-number-img" src="/images/icon-add.png"/>
                 </view>
             </view>
         </view>

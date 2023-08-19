@@ -74,7 +74,7 @@
                 <view class="mycard-card-goods">{{item.food_name}}</view>
                 <view class="mycard-card-price">{{item.sale_price}}</view>
             </view>
-            <view class="mycard-card-button" style="width: 70px;">立即使用</view>
+            <view class="mycard-card-button" style="width: 70px;" bindtap="usePackage" data-id="{{item.id}}">立即使用</view>
         </view>
 
         <!-- before-login-mycard  -->
